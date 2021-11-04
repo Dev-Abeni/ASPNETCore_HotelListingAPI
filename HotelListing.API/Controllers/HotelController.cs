@@ -13,13 +13,13 @@ namespace HotelListing.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CountryController : ControllerBase
+    public class HotelController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly ILogger<CountryController> _logger;
+        private readonly ILogger<HotelController> _logger;
         private readonly IMapper _mapper;
 
-        public CountryController(IUnitOfWork unitOfWork, ILogger<CountryController> logger, IMapper mapper)
+        public HotelController(IUnitOfWork unitOfWork, ILogger<HotelController> logger, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _logger = logger;
@@ -27,39 +27,39 @@ namespace HotelListing.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetCountries()
+        public async Task<IActionResult> GetHotels()
         {
             try
             {
-                var countries = await _unitOfWork.Countries.GetAll();
+                var hotels = await _unitOfWork.Hotels.GetAll();
 
-                var result = _mapper.Map<IList<CountryDto>>(countries);
+                var result = _mapper.Map<IList<HotelDto>>(hotels);
 
                 return Ok(result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                _logger.LogError(ex, $"Something went wrong in the {nameof(GetCountries)}");
-                
+                _logger.LogError(ex, $"Something went wrong in the {nameof(GetHotels)}");
+
                 return StatusCode(500);
             }
         }
 
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetCountry(int id)
+        public async Task<IActionResult> GetHotel(int id)
         {
             try
             {
-                var country = await _unitOfWork.Countries.Get(c => c.Id == id, new List<string> { "Hotels" });
+                var hotel = await _unitOfWork.Hotels.Get(h => h.Id == id, new List<string> { "Country" });
 
-                var result = _mapper.Map<CountryDto>(country);
-                
+                var result = _mapper.Map<HotelDto>(hotel);
+
                 return Ok(result);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Something went wrong in the {nameof(GetCountry)}");
-                
+                _logger.LogError(ex, $"Something went wrong in the {nameof(GetHotel)}");
+
                 return StatusCode(500);
             }
         }

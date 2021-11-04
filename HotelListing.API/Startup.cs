@@ -1,4 +1,5 @@
 using HotelListing.API.Data;
+using HotelListing.API.Mapping;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace HotelListing.API
 {
@@ -41,6 +43,8 @@ namespace HotelListing.API
                     .AllowAnyHeader();
                 });
             });
+
+            services.AddAutoMapper(typeof(MappingProfile));
 
             services.AddSwaggerGen(c =>
             {

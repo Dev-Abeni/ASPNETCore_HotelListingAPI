@@ -1,0 +1,22 @@
+2021-11-04 15:21:46.778 +03:00 [INF] Application Started
+2021-11-04 15:21:49.586 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-11-04 15:21:49.589 +03:00 [INF] Hosting environment: "Development"
+2021-11-04 15:21:49.591 +03:00 [INF] Content root path: "E:\\Personal\\Personal Projects\\ASP.NET Core\\HotelListing\\HotelListing.API"
+2021-11-04 15:21:49.657 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/swagger - -
+2021-11-04 15:21:49.748 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/swagger/index.html - -
+2021-11-04 15:21:49.820 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/swagger - - - 301 - - 165.9651ms
+2021-11-04 15:21:49.948 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/swagger/index.html - - - 200 - text/html;charset=utf-8 199.2421ms
+2021-11-04 15:21:49.998 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/swagger/swagger-ui.css - -
+2021-11-04 15:21:50.013 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/swagger/swagger-ui-bundle.js - -
+2021-11-04 15:21:50.022 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/swagger/swagger-ui-standalone-preset.js - -
+2021-11-04 15:21:50.089 +03:00 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2021-11-04 15:21:50.089 +03:00 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2021-11-04 15:21:50.089 +03:00 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2021-11-04 15:21:50.091 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/swagger/swagger-ui.css - - - 200 142933 text/css 93.1972ms
+2021-11-04 15:21:50.095 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 73.0512ms
+2021-11-04 15:21:50.108 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 95.5851ms
+2021-11-04 15:21:50.281 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/swagger/v1/swagger.json - -
+2021-11-04 15:21:50.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44303/swagger/favicon-32x32.png - -
+2021-11-04 15:21:50.320 +03:00 [INF] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2021-11-04 15:21:50.321 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/swagger/favicon-32x32.png - - - 200 628 image/png 1.1817ms
+2021-11-04 15:21:50.351 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44303/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 69.7075ms

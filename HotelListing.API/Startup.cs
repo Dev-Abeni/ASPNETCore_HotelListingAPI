@@ -1,5 +1,7 @@
 using HotelListing.API.Data;
+using HotelListing.API.IRepositroy;
 using HotelListing.API.Mapping;
+using HotelListing.API.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -46,6 +48,8 @@ namespace HotelListing.API
 
             services.AddAutoMapper(typeof(MappingProfile));
 
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { 
@@ -53,7 +57,9 @@ namespace HotelListing.API
                     Version = "v1" });
             });
 
-            services.AddControllers();
+            // Circular refrence elimination using NewtonSoft
+            services.AddControllers().AddNewtonsoftJson(obj => obj
+                .SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

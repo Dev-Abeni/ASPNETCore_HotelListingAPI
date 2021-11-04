@@ -27,6 +27,8 @@ namespace HotelListing.API.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCountries()
         {
             try
@@ -46,6 +48,8 @@ namespace HotelListing.API.Controllers
         }
 
         [HttpGet("{id:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCountry(int id)
         {
             try

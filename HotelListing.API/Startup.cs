@@ -5,6 +5,7 @@ using HotelListing.API.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -36,6 +37,10 @@ namespace HotelListing.API
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+
+            services.AddAuthentication();
+            services.ConfigureIdentity();
+
             services.AddCors(c => {
                 c.AddPolicy("AllowAny", builder =>
                 {

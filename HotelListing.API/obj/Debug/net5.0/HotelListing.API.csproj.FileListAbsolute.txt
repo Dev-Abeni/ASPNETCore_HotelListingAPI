@@ -23,7 +23,6 @@ E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Deb
 E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\obj\Debug\net5.0\HotelListing.API.csproj.AssemblyReference.cache
 E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\obj\Debug\net5.0\HotelListing.API.GeneratedMSBuildEditorConfig.editorconfig
 E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\obj\Debug\net5.0\HotelListing.API.AssemblyInfoInputs.cache
 E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\obj\Debug\net5.0\HotelListing.API.AssemblyInfo.cs
@@ -73,3 +72,5 @@ E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Deb
 E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\obj\Debug\net5.0\HotelListing.API.csproj.AssemblyReference.cache

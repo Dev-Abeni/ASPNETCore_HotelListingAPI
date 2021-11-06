@@ -74,3 +74,4 @@ E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Deb
 E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Personal\Personal Projects\ASP.NET Core\HotelListing\HotelListing.API\obj\Debug\net5.0\HotelListing.API.csproj.AssemblyReference.cache

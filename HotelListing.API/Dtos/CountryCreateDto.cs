@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace HotelListing.API.Dtos
 {
-    public class CreateCountryDto
+    public class CountryCreateDto
     {
         [Required]
         [StringLength(50)]
@@ -10,6 +11,6 @@ namespace HotelListing.API.Dtos
 
         [Required]
         [StringLength(3)]
-        public string ShortName { get; set; }
+        public string ShortName { get; set; }      
     }
 }

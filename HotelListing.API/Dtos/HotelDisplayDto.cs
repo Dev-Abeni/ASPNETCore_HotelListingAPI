@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace HotelListing.API.Dtos
 {
-    public class HotelDto : CreateHotelDto
+    public class HotelDisplayDto : HotelFormDto
     {
         public int Id { get; set; }
-        public CountryDto Country { get; set; }
+        public CountryDisplayDto Country { get; set; }
     }
 }

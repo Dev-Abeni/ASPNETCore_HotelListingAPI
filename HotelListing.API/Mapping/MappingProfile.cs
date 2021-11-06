@@ -12,10 +12,10 @@ namespace HotelListing.API.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<Country, CountryDto>().ReverseMap();
-            CreateMap<Country, CreateCountryDto>().ReverseMap();
-            CreateMap<Hotel, HotelDto>().ReverseMap();
-            CreateMap<Hotel, CreateHotelDto>().ReverseMap();
+            CreateMap<Country, CountryDisplayDto>().ReverseMap();
+            CreateMap<Country, CountryCreateDto>().ReverseMap();
+            CreateMap<Hotel, HotelDisplayDto>().ReverseMap();
+            CreateMap<Hotel, HotelFormDto>().ReverseMap();
             CreateMap<ApiUser, UserDto>().ReverseMap();
         }
     }

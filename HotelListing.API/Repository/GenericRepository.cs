@@ -1,4 +1,5 @@
 ﻿using HotelListing.API.Data;
+using HotelListing.API.Dtos;
 using HotelListing.API.IRepositroy;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -32,9 +33,7 @@ namespace HotelListing.API.Repository
             _db.RemoveRange(entities);
         }
 
-        public async Task<T> Get(
-            Expression<Func<T, bool>> expression, 
-            List<string> includes = null)
+        public async Task<T> Get(Expression<Func<T, bool>> expression, List<string> includes = null)
         {
             IQueryable<T> query = _db;
 
@@ -49,10 +48,7 @@ namespace HotelListing.API.Repository
             return await query.AsNoTracking().FirstOrDefaultAsync(expression);
         }
 
-        public async Task<IList<T>> GetAll(
-            Expression<Func<T, bool>> expression = null, 
-            Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, 
-            List<string> includes = null)
+        public async Task<IList<T>> GetAll(Expression<Func<T, bool>> expression = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, List<string> includes = null)
         {
             IQueryable<T> query = _db;
 

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace HotelListing.API.Dtos
 {
-    public class CountryDto : CreateCountryDto
+    public class CountryDisplayDto : CountryCreateDto
     {
         public int Id { get; set; }
 
-        public IList<HotelDto> Hotels { get; set; }
+        public IList<HotelDisplayDto> Hotels { get; set; }
     }
 }

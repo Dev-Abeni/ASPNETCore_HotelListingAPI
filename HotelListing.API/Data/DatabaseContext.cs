@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using HotelListing.API.Configuration.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,53 +22,9 @@ namespace HotelListing.API.Data
         {
             base.OnModelCreating(builder);
 
-            builder.Entity<Country>().HasData(               
-                new Country
-                {
-                    Id = 1,
-                    Name = "Jamica",
-                    ShortName = "JM"
-                },
-                new Country
-                {
-                    Id = 2,
-                    Name = "United States",
-                    ShortName = "USA"
-                },
-                new Country
-                {
-                    Id = 3,
-                    Name = "United Kingdom",
-                    ShortName = "UK"
-                }
-            );
-
-            builder.Entity<Hotel>().HasData(
-                new Hotel
-                {
-                    Id = 1,
-                    Name = "Hilton Hotel Jamica",
-                    Address = "Negril", 
-                    CountryId = 1, 
-                    Rating = 4.2
-                },
-                new Hotel
-                {
-                    Id = 2,
-                    Name = "Hilton Hotel New York",
-                    Address = "New York",
-                    CountryId = 2,
-                    Rating = 4.7
-                },
-                new Hotel
-                {
-                    Id = 3,
-                    Name = "Hilton Hotel London",
-                    Address = "London",
-                    CountryId = 3,
-                    Rating = 4.5
-                }
-            );
+            builder.ApplyConfiguration(new RoleConfiguration());
+            builder.ApplyConfiguration(new CountryConfiguration());
+            builder.ApplyConfiguration(new HotelConfiguration());
         }
 
     }

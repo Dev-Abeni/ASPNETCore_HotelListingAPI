@@ -2,6 +2,7 @@ using HotelListing.API.Data;
 using HotelListing.API.IRepositroy;
 using HotelListing.API.Mapping;
 using HotelListing.API.Repository;
+using HotelListing.API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -40,6 +41,7 @@ namespace HotelListing.API
 
             services.AddAuthentication();
             services.ConfigureIdentity();
+            services.ConfigureJWT(Configuration);
 
             services.AddCors(c => {
                 c.AddPolicy("AllowAny", builder =>
@@ -54,6 +56,7 @@ namespace HotelListing.API
             services.AddAutoMapper(typeof(MappingProfile));
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IAuthManager, AuthManager>();
 
             services.AddSwaggerGen(c =>
             {
@@ -85,6 +88,7 @@ namespace HotelListing.API
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
